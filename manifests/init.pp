@@ -135,16 +135,16 @@ class redmine(
     }
   }
 
-  puma::app { 'redmine':
-    app_root    => $app_root,
-    app_user    => $redmine_user,
-    db_adapter  => $db_adapter,
-    db_user     => $db_user,
-    db_password => $db_password,
-    db_host     => $db_host,
-    db_port     => $db_port,
-    rvm_ruby    => $rvm_ruby,
-  }
+  # puma::app { 'redmine':
+  #   app_root    => $app_root,
+  #   app_user    => $redmine_user,
+  #   db_adapter  => $db_adapter,
+  #   db_user     => $db_user,
+  #   db_password => $db_password,
+  #   db_host     => $db_host,
+  #   db_port     => $db_port,
+  #   rvm_ruby    => $rvm_ruby,
+  # }
 
   vcsrepo { "${app_root}/current":
     ensure   => present,
