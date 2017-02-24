@@ -152,7 +152,7 @@ class redmine(
     source   => $redmine_source,
     user     => $redmine_user,
     revision => $redmine_revision,
-    require  => File[$app_root],
+    # require  => File[$app_root],
   }
 
   file { "${app_root}/current/config/database.yml":
